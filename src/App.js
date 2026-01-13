@@ -9,19 +9,20 @@ import Products from "./components/Products";
 import Testimonial from "./components/Testimonial";
 
 function App() {
-	return (
-		<div className='w-full mx-auto bg-white'>
-			<Header />
-			<Hero />
-			<Features />
-			<NewItems />
-			<FeaturesSecond />
-			<Products />
-			<Testimonial />
-			<NewsLetters />
-			<Footer />
-		</div>
-	);
+    return (
+        <div className='w-full mx-auto bg-white'>
+            <Header />
+            <div id="home"><Hero /></div>
+            <div id="features">
+                <Features />
+                <FeaturesSecond />
+            </div>
+            <div id="products"><Products /></div>
+            <Testimonial />
+            <div id="contact"><NewsLetters /></div>
+            <Footer />
+        </div>
+    );
 }
 
 export default App;

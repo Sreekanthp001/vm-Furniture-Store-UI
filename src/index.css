@@ -4,28 +4,41 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	/* Colors */
-	--primary-color: #286f6c;
-	--white: #ffffff;
-	--dark: #23262f;
+/* VentureMond Smooth Scroll Fix */
+html {
+    scroll-behavior: smooth;
+}
 
-	/* Button Color */
-	--btn-light: rgba(255, 255, 255, 0.4);
-	--btn-dark: #23262f;
+:root {
+    /* Colors */
+    --primary-color: #286f6c;
+    --white: #ffffff;
+    --dark: #23262f;
+
+    /* Button Color */
+    --btn-light: rgba(255, 255, 255, 0.4);
+    --btn-dark: #23262f;
 }
 
 @layer base {
-	body {
-		@apply bg-grey-3 font-primary text-base leading-relaxed;
-	}
-	.section {
-		@apply py-[50px] lg:py-[70px];
-	}
-	.title {
-		@apply text-2xl lg:text-[40px] leading-tight font-semibold mb-4;
-	}
-	.subtitle {
-		@apply text-[18px] lg:text-[20px] leading-relaxed mb-5 lg:mb-9;
-	}
+    body {
+        @apply bg-white font-primary text-base leading-relaxed overflow-x-hidden;
+    }
+    .section {
+        @apply py-[80px] lg:py-[100px]; /* Increased padding for better section visibility */
+    }
+    .title {
+        @apply text-3xl lg:text-[45px] leading-tight font-semibold mb-6;
+    }
+    .subtitle {
+        @apply text-[18px] lg:text-[22px] leading-relaxed mb-8 lg:mb-12 text-gray-600;
+    }
+}
+
+/* Custom classes for navigation accent */
+.text-accent {
+    color: #e2e8f0; /* Soft accent color */
+}
+.border-accent {
+    border-color: #ffffff;
 }
